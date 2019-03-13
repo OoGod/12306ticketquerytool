@@ -9,6 +9,7 @@ sudo pip install --upgrade colorama
 <p align="center">
 <img src='./images/result.JPG'>
 </p>
+
 1.爬取车站字母
 ```
 python paser_station.py
