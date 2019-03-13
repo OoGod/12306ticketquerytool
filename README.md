@@ -19,3 +19,6 @@ python tickets.py -g 北京 天津 2019-03-13
 ```
 python setup.py install
 ```
+<p>
+<img src='./images/result.JPG'>
+</p>
