@@ -20,4 +20,5 @@ pprint(dict(stations), indent=4)
 # 写入文件中
 s = dict(stations)
 with open('stations.py','w',encoding='utf-8') as f:
+    f.write('stations=')
     f.write(str(s))

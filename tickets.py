@@ -10,7 +10,7 @@ Usage:
 """
 
 from docopt import docopt
-import stations
+from stations import stations
 import requests
 from prettytable import PrettyTable
 from colorama import init, Fore
@@ -71,11 +71,17 @@ def cli():
     to_station = stations.get(arguments['<to>'])
     date = arguments['<date>']
 
-    url = ('https://kyfw.12306.cn/otn/leftTicket/queryZ?'
-           'leftTicketDTO.train_date={}&'
-           'leftTicketDTO.from_station={}&leftTicketDTO.to_station={}&purpose_codes=ADULT').format(
-        date, from_station, to_station
-    )
+    # url = ('https://kyfw.12306.cn/otn/leftTicket/queryZ?'
+    #        'leftTicketDTO.train_date={}&'
+    #        'leftTicketDTO.from_station={}&leftTicketDTO.to_station={}&purpose_codes=ADULT').format(
+    #     date, from_station, to_station
+    # )
+    url = ('https://kyfw.12306.cn/otn/leftTicket/queryX?'
+        'leftTicketDTO.train_date={}&'
+        'leftTicketDTO.from_station={}&leftTicketDTO.to_station={}&purpose_codes=ADULT').format(
+        date,from_station, to_station
+        )
+    print(url)
     # 不验证证书
     r = requests.get(url, verify=False)
     available_trains = r.json()['data']['result']
