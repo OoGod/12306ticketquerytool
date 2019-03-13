@@ -10,7 +10,7 @@ Usage:
 """
 
 from docopt import docopt
-from stations import stations
+import stations
 import requests
 from prettytable import PrettyTable
 from colorama import init, Fore
