@@ -25,7 +25,7 @@ python setup.py install
 ```
   
 # Note
-查询失效，跟换tickets.py中的查票接口
+查询失效，在官网点击查询，打开开发者工具中的network,将出现的接口与tickets.py中的查票接口进行更换
 <p align="center">
 <img src='./images/port.JPG'>
 </p>
