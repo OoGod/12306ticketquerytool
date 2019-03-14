@@ -23,4 +23,8 @@ python tickets.py -g  广州 北京 2019-03-14
 ```
 python setup.py install
 ```
-
+#Note
+查询失效，跟换tickets.py中的查票接口
+<p align="center">
+<img src='./images/port.JPG'>
+</p>
